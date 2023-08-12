@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('partials/head.ejs') %>
+
+<body>
+
+    <h1><%= title %> </h1>  <!-- (vai usar o titulo que esta sendo indicado no controller) -->
+
+    <%- include('partials/navbar.ejs') %>
+
+    <!-- exibir a msg de cadastro realizado com sucesso
+    verificando se a mensagem existe na função que esta passando typeof
+    se for diferente de indefinido-->
+    <% if (typeof message !== 'undefined' ) {%>
+      <%= message %>
+    <% } %>  
+
+  <form class="clienteCadastro" action="/registro/add" method="post">
+    <div>
+        <table>
+            <tr>
+              <td><label for="nome">Nome:</label></td>
+              <td><input type="text" id="nome" name="nome" required></td>
+            </tr>
+            <tr>
+              <td><label for="idade">Idade:</label></td>
+              <td><input type="number" id="idade" name="idade" required></td>
+            </tr>
+            <tr>
+              <td><label for="cpf">CPF:</label></td>
+              <td><input type="text" id="cpf" name="cpf" required></td>
+            </tr>
+            <tr>
+              <td><label for="telefone">Telefone:</label></td>
+              <td><input type="text" id="telefone" name="telefone" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">E-mail:</label></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="senha">Senha:</label></td>
+              <td><input type="password" id="senha" name="senha" required></td>
+            </tr>
+            <tr>
+              <td><label for="endereco">Endereço:</label></td>
+              <td><input type="text" id="endereco" name="endereco" required></td>
+            </tr>
+          </table>
+          <br>
+    </div>
+          <button type="submit">Cadastrar</button>
+  </form>
+
+
+    <%- include('partials/foot.ejs') %>
+    
+</body>
+</html>

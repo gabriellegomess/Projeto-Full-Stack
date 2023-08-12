@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('partials/head.ejs') %>
+
+<body>
+    <!-- imprimindo a variavel title (vai usar o titulo que esta sendo indicado no controller)
+    incluir um arquivo parcial no template atual. Nesse caso específico, a expressão está sendo usada para incluir o arquivo "foot.ejs" dentro do template no outro o head
+    -->
+    <h1><%= title %> </h1>
+
+    <%- include('partials/navbar.ejs') %>
+
+
+<ul> 
+    <form action="/formulario/add" method="post">
+        <div class="clienteCss">
+          <label for="cliente">Cliente:</label>
+          <select id="cliente" name="cliente">
+            <% clientes.forEach(function(cliente) { %>
+              <option value="<%= cliente._id %>" style="background-color: rgb(255, 168, 182);"><%= cliente.nome %></option>
+            <% }); %>
+          </select>
+        </div>
+      
+        <div class="produtoCss">
+          <label for="produtos">Produtos:</label>
+          <select id="produtos" name="produtos" multiple>
+            <% produtos.forEach(function(produto) { %>
+              <option value="<%= produto._id %>" style="background-color: rgb(255, 168, 182);"><%= produto.nome %></option>
+            <% }); %>
+          </select>
+        </div>
+      
+        <button type="submit">Enviar</button>
+      </form>
+      
+      <% if (resultado) { %>
+        <h2>Informações inseridas:</h2>
+        <p>Cliente: <%= resultado.clienteNome %></p>
+        <p>Produtos:</p>
+        <ul>
+          <% resultado.produtosNomes.forEach(function(produtoNome) { %>
+            <li><%= produtoNome %></li>
+          <% }); %>
+        </ul>
+      <% } %>
+</ul>
+
+    <%- include('partials/foot.ejs') %>
+
+</body>
+</html>

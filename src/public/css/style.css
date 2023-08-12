@@ -1,0 +1,98 @@
+/*definindo a cor de fundo do nosso body */
+body{
+   /*background-color: rgb(253, 199, 209);*/
+   /*background-color: rgb(174, 241, 243) ;*/
+  /* background-color: gainsboro; */
+  background-color: rgb(247, 201, 210);
+}
+
+.link{
+    font-family: sans-serif;
+    font-style: italic;
+    border: 2px black solid;
+    border-radius: 10px;
+    background-color: rgb(255, 175, 188)/* rgb(158, 249, 255)*/;
+}
+
+.pgIni{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: rgb(247, 201, 210);
+    border-radius: 10px;
+    background-image: var(--degrade);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.clienteCadastro{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: var(--degrade);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.produtoCadastro{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: var(--degrade);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+
+button{
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+p{
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    border: 2px solid black;
+    width: 55px;
+    height: 20px;
+    font-size: small;
+    text-align:center;
+}
+
+.produtoCss{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+  
+}
+
+.clienteCss{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    margin-left: 300px;
+    margin-top: 62px;
+}

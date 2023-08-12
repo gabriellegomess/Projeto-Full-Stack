@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('partials/head.ejs') %>
+
+<body>
+
+    <h1><%= title %> </h1>  <!-- (vai usar o titulo que esta sendo indicado no controller) -->
+
+    <%- include('partials/navbar.ejs') %>
+
+    <!-- exibir a msg de cadastro realizado com sucesso
+    verificando se a mensagem existe na função que esta passando typeof
+    se for diferente de indefinido-->
+    <% if (typeof message !== 'undefined' ) {%>
+      <%= message %>
+    <% } %>  
+
+  <form class="produtoCadastro" action="/registroProdutos/add" method="post">
+    <div>
+        <table>
+            <tr>
+              <td><label for="nome">Nome:</label></td>
+              <td><input type="text" id="nome" name="nome" required ></td>
+            </tr>
+            <tr>
+              <td><label for="marca">Marca:</label></td>
+              <td><input type="text" id="marca" name="marca" required ></td>
+            </tr>
+            <tr>
+              <td><label for="cod">Código de Barras:</label></td>
+              <td><input type="number" id="cod" name="cod" required ></td>
+            </tr>
+            <tr>
+              <td><label for="idp">ID Do Produto:</label></td>
+              <td><input type="number" id="idp" name="idp" required ></td>
+            </tr>
+        </table>
+          <br>
+    </div>
+          <button type="submit">Cadastrar</button>
+  </form>
+
+
+    <%- include('partials/foot.ejs') %>
+    
+</body>
+</html>

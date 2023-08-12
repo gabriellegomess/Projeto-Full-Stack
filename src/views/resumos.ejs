@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('partials/head.ejs') %>
+
+<body>
+  <%- include('partials/navbar.ejs') %> <!-- <% %> função do ejs-->
+
+  <h1>Lista de Resumos</h1>
+
+  <ul>
+    <% resumos.forEach((resumo) => { %>
+      <li>
+        <% if (resumo.cliente) { %>
+          <strong>Cliente:</strong> <%= resumo.cliente.nome %> - CPF: <%= resumo.cliente.cpf %><br>
+        <% } %>
+        <strong class="resumo">Produtos:</strong><br>
+        <ul>
+          <% resumo.produtos.forEach((produto) => { %>
+            <li>
+              <%= produto.nome %> - <%= produto.marca %> - <%= produto.cod %> - <%= produto.idp %><hr>
+            </li>
+          <% }) %>
+        </ul>
+      </li>
+    <% }) %>
+  </ul>
+
+  <%- include('partials/foot.ejs') %>
+</body>
+
+</html>

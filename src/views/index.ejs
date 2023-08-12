@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('partials/head.ejs') %>
+
+<body class="pgIni">
+
+    <!-- imprimindo a variavel title (vai usar o titulo que esta sendo indicado no controller)
+    incluir um arquivo parcial no template atual. Nesse caso específico, a expressão está sendo usada para incluir o arquivo "foot.ejs" dentro do template no outro o head
+    -->
+
+    <h1><%= title %> </h1>
+
+    <%- include('partials/navbar.ejs') %>
+    <%- include('partials/foot.ejs') %>
+    
+</body>
+</html>
